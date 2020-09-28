@@ -1,0 +1,459 @@
+/* start navbar */
+
+.navbar {
+    position: fixed;
+    top: 30px;
+    min-width: 100%;
+    z-index: 9999;
+    .navbar-brand {
+        color: $navColor;
+        letter-spacing: 2.5px;
+        transition: $transition2s;
+        font: {
+            size: $navBrandFont;
+            weight: 900;
+        }
+        &:hover,
+        code {
+            color: $secShapesColor;
+        }
+        @media (min-width: $phone) and (max-width: $medium) {
+            font-size: 25px;
+            margin-left: 10px;
+        }
+    }
+    .navbar-toggler {
+        border: 1px solid #22a4e1;
+        .navbar-toggler-icon {
+            background-image: url(../img/bar.png);
+        }
+    }
+    .nav-item {
+        .nav-link {
+            color: $navColor;
+            margin-left: 10px;
+            transition: $transition2s;
+            border: 1px solid $navColor;
+            border-radius: 30px;
+            padding: 5px 20px;
+            font: {
+                size: 16px;
+            }
+            &:hover {
+                background: $mainShapesColor;
+                border: 1px solid $mainShapesColor;
+                color: $navColor;
+                box-shadow: 2px 2px 15px $mainShapesColor;
+                transition: $transition2s;
+                @media (min-width: $phone) and (max-width: $xLarge) {
+                    margin-left: 5px;
+                }
+            }
+            @media (min-width:$phone) and (max-width:$xLarge) {
+                margin-top: 10px;
+            }
+            // &:hover {
+            //     @media (min-width: $phone) and (max-width: $small) {
+            //         background: $mainShapesColor;
+            //         border: 0;
+            //         color: $navColor;
+            //         box-shadow: 2px 2px 15px $mainShapesColor;
+            //         margin-left: 5px;
+            //     }
+            // }
+        }
+        .active {
+            background: $mainShapesColor;
+            border: 1px solid $mainShapesColor;
+            color: $navColor !important;
+            box-shadow: 2px 2px 15px $mainShapesColor;
+            padding: 5px 20px;
+        }
+    }
+}
+
+
+/* end navbar */
+
+
+/* start about me */
+
+.about-me {
+    padding-top: $mainPadding;
+    font-family: 'abel';
+    position: relative;
+    .info {
+        @include myInfoWords;
+        h3 {
+            @include heading;
+        }
+        p:nth-of-type(2) {
+            margin-top: 15px;
+        }
+        ul {
+            li {
+                display: inline-block;
+                margin-left: 15px;
+                @media(min-width: $phone) and(max-width: $small) {
+                    margin: 5px;
+                }
+                a {
+                    i {
+                        color: $navBackground;
+                        opacity: 0.8;
+                        transition: $transition2s;
+                        margin-top: 20px;
+                        &:hover {
+                            opacity: 1;
+                        }
+                    }
+                }
+            }
+        }
+        @media(min-width:$phone) and(max-width:$small) {
+            margin-left: 10px;
+            font-size: 18px;
+        }
+    }
+}
+
+
+/* end about me */
+
+
+/* start my skills */
+
+.my-skills {
+    padding-top: $mainPadding;
+    .skill-info {
+        h3 {
+            @include heading;
+        }
+        p {
+            @include myInfoWords;
+            @media(min-width: $phone) and(max-width: $small) {
+                font-size: 18px;
+            }
+        }
+        button {
+            margin-left: -13px;
+            margin-top: 20px;
+            a {
+                @include myMainButton;
+            }
+        }
+    }
+    .progress-bars {
+        margin-top: 50px;
+        span {
+            margin-bottom: 15px;
+            margin-top: 15px;
+            display: inline-block;
+            color: $infoColor;
+            font: {
+                size: 17px;
+                family: 'Rajdhani', sans-serif;
+            }
+        }
+        .progress {
+            border-radius: 20px;
+        }
+        .progress-bar {
+            background: $navBackground;
+            border-radius: 20px;
+        }
+    }
+    @media(min-width: $phone) and(max-width: $small) {
+        padding-top: $mainPadding/2;
+        margin-left: 10px;
+        font-size: 17px;
+    }
+}
+
+
+/* end my skills */
+
+
+/* start my services */
+
+.my-services {
+    padding-top: $mainPadding;
+    h3 {
+        @include centerHeading;
+    }
+    .service {
+        border-radius: 15px;
+        box-shadow: 5px 5px 10px #eee, -5px -5px 10px #eee;
+        padding: 20px;
+        margin-bottom: 20px;
+        margin-top: 50px;
+        position: relative;
+        overflow: hidden;
+        i {
+            margin-bottom: 30px;
+            width: 70px;
+            height: 70px;
+            line-height: 70px;
+            border: 1px solid $navColor;
+            border-radius: 50%;
+            background: $navColor;
+            box-shadow: 3px 3px 5px #eee;
+            color: $navBackground;
+            z-index: 999;
+        }
+        h4 {
+            color: $navBackground;
+        }
+        p {
+            margin-top: 20px;
+            line-height: 1.5;
+            color: #999;
+            font: {
+                size: 19px;
+            }
+            z-index: 1;
+        }
+        span {
+            clip-path: circle(50% at 14% 0);
+            background: $navBackground;
+            width: 175px;
+            height: 150px;
+            position: absolute;
+            top: -2px;
+            left: -3px;
+            border-radius: 15px;
+            z-index: -1;
+        }
+        &:hover i {
+            transform: rotateY(180deg);
+            background: $navBackground;
+            color: $navColor;
+            transition: $transition2s;
+        }
+    }
+}
+
+
+/* end my services */
+
+
+/* start my projects */
+
+.my-projects {
+    padding-top: $mainPadding;
+    h3 {
+        @include centerHeading;
+    }
+    .project {
+        margin-top: 30px;
+        margin-bottom: 20px;
+        position: relative;
+        overflow: hidden;
+        border-radius: 15px;
+        box-shadow: 2px 2px 10px $footerColor;
+        .project-overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            transform: translateY(-262px);
+            transition: all 0.5s ease-in-out;
+            background: rgba($navBackground, 0.899);
+            border-radius: 15px;
+            @media(min-width: $maxMed) and(max-width: $large) {
+                transform: translateY(-330px);
+            }
+            h2 {
+                margin-top: 50px;
+                color: $navColor;
+                @media(min-width: $phone) and(max-width: $small) {
+                    margin-top: 30px;
+                    font-size: 27px;
+                }
+            }
+            button {
+                margin-top: 40px;
+                a {
+                    @include mySecButton;
+                }
+                @media(min-width:$phone) and(max-width:$small) {
+                    margin-top: 20px
+                }
+            }
+        }
+        &:hover .project-overlay {
+            transform: translateY(0);
+        }
+        img {
+            width: 100%; // phone media == 400px
+            height: 100%;
+            border-radius: 10px;
+        }
+    }
+}
+
+// }
+
+/* end my projects */
+
+
+/* start hire */
+
+.hire {
+    padding-top: $mainPadding;
+    margin-top: $mainPadding;
+    background: $navBackground;
+    color: $navColor;
+    letter-spacing: 2.5px;
+    min-height: 400px;
+    .available {
+        h2 {
+            margin-top: 20px;
+            margin-bottom: 20px;
+            span {
+                color: $secShapesColor;
+            }
+        }
+        p {
+            font-size: 20px;
+        }
+        button {
+            margin-top: 20px;
+            a {
+                @include mySecButton;
+            }
+        }
+    }
+}
+
+
+/* end hire */
+
+
+/* start counter */
+
+.counter {
+    padding-top: $mainPadding;
+    .count {
+        border: 1px solid $navColor;
+        padding: 20px;
+        box-shadow: 5px 5px 10px $footerColor;
+        span {
+            color: $navBackground;
+            font: {
+                size: 40px;
+                weight: 900;
+            }
+        }
+        p {
+            color: $infoColor;
+            font: {
+                size: 20px;
+                family: 'Share', cursive;
+            }
+        }
+    }
+}
+
+
+/* end counter */
+
+
+/* start my info */
+
+.my-info {
+    padding-top: $mainPadding;
+    h3 {
+        @include centerHeading;
+    }
+    .points {
+        margin-top: 40px;
+        i {
+            margin-right: 15px;
+            color: $secShapesColor;
+        }
+        a {
+            text-decoration: none;
+            color: $navBackground;
+        }
+        p {
+            @include myInfoWords;
+        }
+        @media(min-width:$phone) and(max-width:$small) {
+            width: 400px;
+            margin: 5px auto;
+        }
+    }
+    .map {
+        margin-top: 40px;
+        overflow: hidden;
+    }
+    iframe {
+        box-shadow: 5px 5px 10px $footerColor;
+        @media (min-width: $phone) and (max-width: $small) {
+            width: 450px;
+            margin: 5px auto;
+        } // make width small on phone
+    }
+}
+
+
+/* end my info */
+
+
+/* start contact me */
+
+.contact-me {
+    padding-top: 30px;
+    .inputs {
+        padding: 25px;
+        margin-top: 25px;
+        form {
+            .form-group {
+                .form-control:first-child,
+                .form-control:nth-of-type(2) {
+                    display: inline-block;
+                    color: #000;
+                    background-color: #fff;
+                    border: 1px solid #ced4da;
+                    border-radius: 10px;
+                }
+            }
+            button {
+                @include myFormButton;
+                &:hover {
+                    opacity: 1;
+                }
+            }
+            .social {
+                margin-left: 302px;
+                @media(min-width: $phone) and(max-width: $maxMed) {
+                    margin: 0;
+                    display: block;
+                }
+                @media(min-width: $large) and(max-width: $xLarge) {
+                    margin-left: 185px;
+                }
+                // adjust the margin in tablet and mobiles
+                span {
+                    a {
+                        i {
+                            margin-left: 10px;
+                            color: $navBackground;
+                            opacity: 0.8;
+                            transition: $transition2s;
+                            margin-top: 20px;
+                            &:hover {
+                                opacity: 1;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+
+/* end contact me */

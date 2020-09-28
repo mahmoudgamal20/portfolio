@@ -1,0 +1,51 @@
+/* start footer */
+
+.footer {
+    margin-top: 50px;
+    padding-top: $mainPadding/2;
+    background: $navBackground;
+    h3 {
+        color: $navColor;
+        margin-bottom: 30px;
+    }
+    p,
+    ul {
+        color: $footerColor;
+        font-size: 17px;
+        line-height: 1.8;
+        margin-bottom: 30px;
+    }
+    ul {
+        li {
+            a {
+                all: unset;
+                color: $footerColor;
+                cursor: pointer;
+                transition: $transition2s;
+                &:hover {
+                    padding-left: 10px;
+                    color: $navColor;
+                }
+            }
+        }
+    }
+}
+
+hr {
+    border: -0.5px solid $footerColor;
+}
+
+
+/* start copyright */
+
+.copyright {
+    color: $footerColor;
+    font-size: 17px;
+    padding-bottom: 15px;
+}
+
+
+/* end copyright */
+
+
+/* end footer */
